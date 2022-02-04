@@ -39,7 +39,7 @@ const BootstrapSwitchButton = (props) => {
 	const [onstyle, setOnstyle] = useState(props.onstyle || 'primary');
 	const [offstyle, setOffstyle] = useState(props.offstyle || 'light');
 	const [size, setSize] = useState(props.size || '');
-	const [style, setStyle] = useState(props.style || '');
+	const [className, setClassName] = useState(props.className || '');
 	const [width, setWidth] = useState(props.width || null);
 	const [height, setHeight] = useState(props.height || null);
 
@@ -70,21 +70,9 @@ const BootstrapSwitchButton = (props) => {
 		}
 	};
 
-	const enable = () => {
-		setDisabled(false);
-	};
-
-	const disable = () => {
-		setDisabled(true);
-	};
-
 	let switchStyle = {};
-	if (width) {
-		switchStyle.width = width + 'px';
-	}
-	if (height) {
-		switchStyle.height = height + 'px';
-	}
+	if (width) switchStyle.width = width + 'px';
+	if (height) switchStyle.height = height + 'px';
 
 	let labelStyle = {};
 	if (height) labelStyle.lineHeight = 'calc(' + height + 'px * 0.8)';
@@ -95,7 +83,7 @@ const BootstrapSwitchButton = (props) => {
 				'switch btn',
 				(checked ? 'on btn-' + onstyle : 'off btn-' + offstyle),
 				(size ? ' btn-' + size : ''),
-				(style ? ' ' + style : '')
+				className
 			)}
 			style={switchStyle}
 			onClick={toggle}
@@ -117,7 +105,6 @@ const BootstrapSwitchButton = (props) => {
 						'btn-' + offstyle,
 						(size ? ' btn-' + size : '')
 					)}
-					className={'switch-off btn btn-' + offstyle + (size ? ' btn-' + size : '')}
 					style={labelStyle}
 				>
 						{offlabel}
