@@ -50,7 +50,7 @@ const BootstrapSwitchButton = (props) => {
 		if (typeof props.disabled === 'boolean' && props.disabled !== disabled) {
 			setDisabled(props.disabled);
 		}
-	});
+	}, []);
 
 	const toggle = event => {
 		checked ? off() : on();
@@ -83,7 +83,7 @@ const BootstrapSwitchButton = (props) => {
 				'switch btn',
 				(checked ? 'on btn-' + onstyle : 'off btn-' + offstyle),
 				(size ? ' btn-' + size : ''),
-				className
+				className || ''
 			)}
 			style={switchStyle}
 			onClick={toggle}
@@ -107,7 +107,7 @@ const BootstrapSwitchButton = (props) => {
 					)}
 					style={labelStyle}
 				>
-						{offlabel}
+					{offlabel}
 				</span>
 				<span
 					className={classNames(

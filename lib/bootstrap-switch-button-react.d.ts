@@ -32,13 +32,11 @@ interface BootstrapSwitchButtonProps {
   onstyle?: Colors | ColorsOutline;
   offstyle?: Colors | ColorsOutline;
   size?: "xs" | "sm" | "lg";
-  style?: string;
+  className?: string;
   width?: number;
   height?: number;
 }
 
-declare class BootstrapSwitchButton extends React.Component<
-  BootstrapSwitchButtonProps
-> {}
+const BootstrapSwitchButton: React.FC<BootstrapSwitchButtonProps>;
 
 export default BootstrapSwitchButton;

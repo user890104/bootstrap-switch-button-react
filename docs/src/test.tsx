@@ -32,7 +32,7 @@ const AppMain: React.SFC<{ compiler: string; framework: string }> = props => {
       <div id="size-lg" className="container border p-3 mb-4">
         <div className="row mb-3">
           <div className="col px-5 py-3">
-            <BootstrapSwitchButton checked={true} size="lg" style="w-100" />
+            <BootstrapSwitchButton checked={true} size="lg" className="w-100" />
           </div>
           <div className="col px-5 py-3">
             <button className="btn btn-lg btn-info w-100">Button</button>
@@ -64,7 +64,7 @@ const AppMain: React.SFC<{ compiler: string; framework: string }> = props => {
       <div id="size-md" className="container border p-3 mb-4">
         <div className="row mb-3">
           <div className="col px-5 py-3">
-            <BootstrapSwitchButton checked={true} style="w-100" />
+            <BootstrapSwitchButton checked={true} className="w-100" />
           </div>
           <div className="col px-5 py-3">
             <button className="btn btn-info w-100">Button</button>
@@ -96,7 +96,7 @@ const AppMain: React.SFC<{ compiler: string; framework: string }> = props => {
       <div id="size-sm" className="container border p-3 mb-4">
         <div className="row mb-3">
           <div className="col px-5 py-3">
-		  <BootstrapSwitchButton checked={true} size="sm" style="w-100" />
+          <BootstrapSwitchButton checked={true} size="sm" className="w-100" />
           </div>
           <div className="col px-5 py-3">
             <button className="btn btn-sm btn-info w-100">Button</button>

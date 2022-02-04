@@ -140,13 +140,13 @@ const AppMain: React.SFC<{ compiler: string; framework: string }> = props => {
             checked={true}
             onstyle="outline-light"
             offstyle="outline-dark"
-            style="border"
+            className="border"
           />
           <BootstrapSwitchButton
             checked={true}
             onstyle="outline-dark"
             offstyle="outline-light"
-            style="border"
+            className="border"
           />
         </div>
       </div>
@@ -160,8 +160,8 @@ const AppMain: React.SFC<{ compiler: string; framework: string }> = props => {
 <BootstrapSwitchButton checked={true} onstyle="outline-danger" offstyle="outline-warning"/>
 <BootstrapSwitchButton checked={true} onstyle="outline-warning" offstyle="outline-info"/>
 <BootstrapSwitchButton checked={true} onstyle="outline-info" offstyle="outline-primary"/>
-<BootstrapSwitchButton checked={true} onstyle="outline-light" offstyle="outline-dark" style="border" />
-<BootstrapSwitchButton checked={true} onstyle="outline-dark" offstyle="outline-light" style="border"/>`}
+<BootstrapSwitchButton checked={true} onstyle="outline-light" offstyle="outline-dark" className="border" />
+<BootstrapSwitchButton checked={true} onstyle="outline-dark" offstyle="outline-light" className="border"/>`}
             </code>
           </pre>
         </div>
@@ -185,13 +185,13 @@ const AppMain: React.SFC<{ compiler: string; framework: string }> = props => {
             checked={true}
             onstyle="light"
             offstyle="dark"
-            style="border"
+            className="border"
           />
           <BootstrapSwitchButton
             checked={true}
             onstyle="dark"
             offstyle="light"
-            style="border"
+            className="border"
           />
         </div>
       </div>
@@ -205,8 +205,8 @@ const AppMain: React.SFC<{ compiler: string; framework: string }> = props => {
 <BootstrapSwitchButton checked={true} onstyle="danger" />
 <BootstrapSwitchButton checked={true} onstyle="warning" />
 <BootstrapSwitchButton checked={true} onstyle="info" />
-<BootstrapSwitchButton checked={true} onstyle="light" offstyle="dark" style="border" />
-<BootstrapSwitchButton checked={true} onstyle="dark" offstyle="light" style="border"/>`}
+<BootstrapSwitchButton checked={true} onstyle="light" offstyle="dark" className="border" />
+<BootstrapSwitchButton checked={true} onstyle="dark" offstyle="light" className="border"/>`}
             </code>
           </pre>
         </div>
@@ -254,13 +254,13 @@ const AppMain: React.SFC<{ compiler: string; framework: string }> = props => {
             checked={true}
             onstyle="outline-light"
             offstyle="outline-dark"
-            style="border"
+            className="border"
           />
           <BootstrapSwitchButton
             checked={true}
             onstyle="outline-dark"
             offstyle="outline-light"
-            style="border"
+            className="border"
           />
         </div>
       </div>
@@ -274,8 +274,8 @@ const AppMain: React.SFC<{ compiler: string; framework: string }> = props => {
 <BootstrapSwitchButton checked={true} onstyle="outline-danger" offstyle="outline-warning"/>
 <BootstrapSwitchButton checked={true} onstyle="outline-warning" offstyle="outline-info"/>
 <BootstrapSwitchButton checked={true} onstyle="outline-info" offstyle="outline-primary"/>
-<BootstrapSwitchButton checked={true} onstyle="outline-light" offstyle="outline-dark" style="border" />
-<BootstrapSwitchButton checked={true} onstyle="outline-dark" offstyle="outline-light" style="border"/>`}
+<BootstrapSwitchButton checked={true} onstyle="outline-light" offstyle="outline-dark" className="border" />
+<BootstrapSwitchButton checked={true} onstyle="outline-dark" offstyle="outline-light" className="border"/>`}
             </code>
           </pre>
         </div>
