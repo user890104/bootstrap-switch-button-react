@@ -27,117 +27,110 @@
 |*|  SOFTWARE.
 \*/
 
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './style.css';
 import classNames from "classnames";
 
-export default class BootstrapSwitchButton extends React.Component {
-	constructor(props) {
-		super(props);
+const BootstrapSwitchButton = (props) => {
+	const [checked, setChecked] = useState(typeof props.checked === 'boolean' ? props.checked : false);
+	const [disabled, setDisabled] = useState(typeof props.disabled === 'boolean' ? props.disabled : false);
+	const [onlabel, setOnlabel] = useState(props.onlabel || 'On');
+	const [offlabel, setOfflabel] = useState(props.offlabel || 'Off');
+	const [onstyle, setOnstyle] = useState(props.onstyle || 'primary');
+	const [offstyle, setOffstyle] = useState(props.offstyle || 'light');
+	const [size, setSize] = useState(props.size || '');
+	const [style, setStyle] = useState(props.style || '');
+	const [width, setWidth] = useState(props.width || null);
+	const [height, setHeight] = useState(props.height || null);
 
-		this.state = {
-			checked: typeof this.props.checked === 'boolean' ? this.props.checked : false,
-			disabled: typeof this.props.disabled === 'boolean' ? this.props.disabled : false,
-			onlabel: this.props.onlabel || 'On',
-			offlabel: this.props.offlabel || 'Off',
-			onstyle: this.props.onstyle || 'primary',
-			offstyle: this.props.offstyle || 'light',
-			size: this.props.size || '',
-			style: this.props.style || '',
-			width: this.props.width || null,
-			height: this.props.height || null,
-		};
+	useEffect(() => {
+		if (typeof props.checked === 'boolean' && props.checked !== checked) {
+			setChecked(props.checked);
+		}
+		if (typeof props.disabled === 'boolean' && props.disabled !== disabled) {
+			setDisabled(props.disabled);
+		}
+	});
+
+	const toggle = event => {
+		checked ? off() : on();
+	};
+
+	const off = () => {
+		if (!disabled) {
+			setChecked(false);
+			if (props.onChange) props.onChange(false);
+		}
+	};
+
+	const on = () => {
+		if (!disabled) {
+			setChecked(true);
+			if (props.onChange) props.onChange(true);
+		}
+	};
+
+	const enable = () => {
+		setDisabled(false);
+	};
+
+	const disable = () => {
+		setDisabled(true);
+	};
+
+	let switchStyle = {};
+	if (width) {
+		switchStyle.width = width + 'px';
+	}
+	if (height) {
+		switchStyle.height = height + 'px';
 	}
 
-	componentDidUpdate(_, prevState) {
-		const { checked, disabled } = this.props;
-		if (typeof checked === 'boolean' && checked !== prevState.checked) {
-			this.setState({ checked });
-		}
-		if (typeof disabled === 'boolean' && disabled !== prevState.disabled) {
-			this.setState({ disabled });
-		}
-	}
+	let labelStyle = {};
+	if (height) labelStyle.lineHeight = 'calc(' + height + 'px * 0.8)';
 
-	toggle = event => {
-		this.state.checked ? this.off() : this.on();
-	};
-	off = () => {
-		if (!this.state.disabled) {
-			this.setState({
-				checked: false,
-			});
-			if (this.props.onChange) this.props.onChange(false);
-		}
-	};
-	on = () => {
-		if (!this.state.disabled) {
-			this.setState({
-				checked: true,
-			});
-			if (this.props.onChange) this.props.onChange(true);
-		}
-	};
-	enable = () => {
-		this.setState({
-			disabled: false,
-		});
-	};
-	disable = () => {
-		this.setState({
-			disabled: true,
-		});
-	};
-
-	render = () => {
-		let switchStyle = {};
-		this.state.width ? (switchStyle.width = this.state.width + 'px') : null;
-		this.state.height ? (switchStyle.height = this.state.height + 'px') : null;
-
-		let labelStyle = {};
-		if (this.state.height) labelStyle.lineHeight = 'calc(' + this.state.height + 'px * 0.8)';
-
-		return (
-			<div
-				className={classNames(
-					'switch btn',
-					(this.state.checked ? 'on btn-' + this.state.onstyle : 'off btn-' + this.state.offstyle),
-					(this.state.size ? ' btn-' + this.state.size : ''),
-					(this.state.style ? ' ' + this.state.style : '')
-				)}
-				style={switchStyle}
-				onClick={this.toggle}
-			>
-				<div className="switch-group">
-					<span
-						className={classNames(
-							'switch-on btn',
-							'btn-' + this.state.onstyle,
-							(this.state.size ? ' btn-' + this.state.size : '')
-						)}
-						style={labelStyle}
-					>
-						{this.state.onlabel}
-					</span>
-					<span
-						className={classNames(
-							'switch-off btn',
-							'btn-' + this.state.offstyle,
-							(this.state.size ? ' btn-' + this.state.size : '')
-						)}
-						className={'switch-off btn btn-' + this.state.offstyle + (this.state.size ? ' btn-' + this.state.size : '')}
-						style={labelStyle}
-					>
-						{this.state.offlabel}
-					</span>
-					<span
-						className={classNames(
-							'switch-handle btn btn-light',
-							(this.state.size ? 'btn-' + this.state.size : '')
-						)}
-					/>
-				</div>
+	return (
+		<div
+			className={classNames(
+				'switch btn',
+				(checked ? 'on btn-' + onstyle : 'off btn-' + offstyle),
+				(size ? ' btn-' + size : ''),
+				(style ? ' ' + style : '')
+			)}
+			style={switchStyle}
+			onClick={toggle}
+		>
+			<div className="switch-group">
+				<span
+					className={classNames(
+						'switch-on btn',
+						'btn-' + onstyle,
+						(size ? ' btn-' + size : '')
+					)}
+					style={labelStyle}
+				>
+					{onlabel}
+				</span>
+				<span
+					className={classNames(
+						'switch-off btn',
+						'btn-' + offstyle,
+						(size ? ' btn-' + size : '')
+					)}
+					className={'switch-off btn btn-' + offstyle + (size ? ' btn-' + size : '')}
+					style={labelStyle}
+				>
+						{offlabel}
+				</span>
+				<span
+					className={classNames(
+						'switch-handle btn btn-light',
+						(size ? 'btn-' + size : '')
+					)}
+				/>
 			</div>
-		);
-	};
+		</div>
+	);
 }
+
+export default BootstrapSwitchButton;
