@@ -29,6 +29,7 @@
 
 import React from 'react';
 import './style.css';
+import classNames from "classnames";
 
 export default class BootstrapSwitchButton extends React.Component {
 	constructor(props) {
@@ -98,23 +99,43 @@ export default class BootstrapSwitchButton extends React.Component {
 
 		return (
 			<div
-				className={
-					'switch btn ' +
-					(this.state.checked ? 'on btn-' + this.state.onstyle : 'off btn-' + this.state.offstyle) +
-					(this.state.size ? ' btn-' + this.state.size : '') +
+				className={classNames(
+					'switch btn',
+					(this.state.checked ? 'on btn-' + this.state.onstyle : 'off btn-' + this.state.offstyle),
+					(this.state.size ? ' btn-' + this.state.size : ''),
 					(this.state.style ? ' ' + this.state.style : '')
-				}
+				)}
 				style={switchStyle}
 				onClick={this.toggle}
 			>
 				<div className="switch-group">
-					<span className={'switch-on btn btn-' + this.state.onstyle + (this.state.size ? ' btn-' + this.state.size : '')} style={labelStyle}>
+					<span
+						className={classNames(
+							'switch-on btn',
+							'btn-' + this.state.onstyle,
+							(this.state.size ? ' btn-' + this.state.size : '')
+						)}
+						style={labelStyle}
+					>
 						{this.state.onlabel}
 					</span>
-					<span className={'switch-off btn btn-' + this.state.offstyle + (this.state.size ? ' btn-' + this.state.size : '')} style={labelStyle}>
+					<span
+						className={classNames(
+							'switch-off btn',
+							'btn-' + this.state.offstyle,
+							(this.state.size ? ' btn-' + this.state.size : '')
+						)}
+						className={'switch-off btn btn-' + this.state.offstyle + (this.state.size ? ' btn-' + this.state.size : '')}
+						style={labelStyle}
+					>
 						{this.state.offlabel}
 					</span>
-					<span className={'switch-handle btn btn-light' + (this.state.size ? 'btn-' + this.state.size : '')} />
+					<span
+						className={classNames(
+							'switch-handle btn btn-light',
+							(this.state.size ? 'btn-' + this.state.size : '')
+						)}
+					/>
 				</div>
 			</div>
 		);
