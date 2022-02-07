@@ -44,16 +44,17 @@ const BootstrapSwitchButton = (props) => {
 	const [height, setHeight] = useState(props.height || null);
 
 	useEffect(() => {
-		if (typeof props.checked === 'boolean' && props.checked !== checked) {
+		if (props.checked !== checked) {
 			setChecked(props.checked);
 		}
-		if (typeof props.disabled === 'boolean' && props.disabled !== disabled) {
+		if (props.disabled !== disabled) {
 			setDisabled(props.disabled);
 		}
-	}, []);
+	}, [props.checked, props.disabled]);
 
 	const toggle = event => {
 		checked ? off() : on();
+		event.stopPropagation();
 	};
 
 	const off = () => {
