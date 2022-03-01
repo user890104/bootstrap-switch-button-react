@@ -34,23 +34,26 @@ import classNames from "classnames";
 const BootstrapSwitchButton = (props) => {
 	const [checked, setChecked] = useState(typeof props.checked === 'boolean' ? props.checked : false);
 	const [disabled, setDisabled] = useState(typeof props.disabled === 'boolean' ? props.disabled : false);
-	const [onlabel, setOnlabel] = useState(props.onlabel || 'On');
-	const [offlabel, setOfflabel] = useState(props.offlabel || 'Off');
-	const [onstyle, setOnstyle] = useState(props.onstyle || 'primary');
-	const [offstyle, setOffstyle] = useState(props.offstyle || 'light');
-	const [size, setSize] = useState(props.size || '');
-	const [className, setClassName] = useState(props.className || '');
-	const [width, setWidth] = useState(props.width || null);
-	const [height, setHeight] = useState(props.height || null);
+	const onlabel = props.onlabel || 'On';
+	const offlabel = props.offlabel || 'Off';
+	const onstyle = props.onstyle || 'primary';
+	const offstyle = props.offstyle || 'light';
+	const size = props.size || '';
+	const className = props.className || '';
+	const width = props.width || null;
+	const height = props.height || null;
 
 	useEffect(() => {
 		if (props.checked !== checked) {
 			setChecked(props.checked);
 		}
+	}, [props.checked]);
+
+	useEffect(() => {
 		if (props.disabled !== disabled) {
 			setDisabled(props.disabled);
 		}
-	}, [props.checked, props.disabled]);
+	}, [props.disabled]);
 
 	const toggle = event => {
 		checked ? off() : on();
