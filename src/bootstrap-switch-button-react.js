@@ -86,7 +86,7 @@ const BootstrapSwitchButton = (props) => {
 			className={classNames(
 				'switch btn',
 				(checked ? 'on btn-' + onstyle : 'off btn-' + offstyle),
-				(size ? ' btn-' + size : ''),
+				(size ? 'btn-' + size : ''),
 				className || ''
 			)}
 			style={switchStyle}
@@ -97,7 +97,7 @@ const BootstrapSwitchButton = (props) => {
 					className={classNames(
 						'switch-on btn',
 						'btn-' + onstyle,
-						(size ? ' btn-' + size : '')
+						(size ? 'btn-' + size : '')
 					)}
 					style={labelStyle}
 				>
@@ -107,7 +107,7 @@ const BootstrapSwitchButton = (props) => {
 					className={classNames(
 						'switch-off btn',
 						'btn-' + offstyle,
-						(size ? ' btn-' + size : '')
+						(size ? 'btn-' + size : '')
 					)}
 					style={labelStyle}
 				>
