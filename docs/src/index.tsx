@@ -69,30 +69,30 @@ const AppMain: React.SFC<{ compiler: string; framework: string }> = props => {
         <div className="col p-3 bg-white border">
           <BootstrapSwitchButton
             checked={true}
-            onstyle="primary"
-            offstyle="info"
+            styleOn="primary"
+            styleOff="info"
           />
-          <BootstrapSwitchButton checked={true} onstyle="secondary" />
-          <BootstrapSwitchButton checked={true} onstyle="success" />
-          <BootstrapSwitchButton checked={true} onstyle="danger" />
-          <BootstrapSwitchButton checked={true} onstyle="warning" />
-          <BootstrapSwitchButton checked={true} onstyle="info" />
-          <BootstrapSwitchButton checked={true} onstyle="light" />
-          <BootstrapSwitchButton checked={true} onstyle="dark" />
+          <BootstrapSwitchButton checked={true} styleOn="secondary" />
+          <BootstrapSwitchButton checked={true} styleOn="success" />
+          <BootstrapSwitchButton checked={true} styleOn="danger" />
+          <BootstrapSwitchButton checked={true} styleOn="warning" />
+          <BootstrapSwitchButton checked={true} styleOn="info" />
+          <BootstrapSwitchButton checked={true} styleOn="light" />
+          <BootstrapSwitchButton checked={true} styleOn="dark" />
         </div>
       </div>
       <div className="row">
         <div className="col p-0">
           <pre>
             <code className="language-typescript">
-              {`<BootstrapSwitchButton checked={true} onstyle="primary" offstyle="info" />
-<BootstrapSwitchButton checked={true} onstyle="secondary" />
-<BootstrapSwitchButton checked={true} onstyle="success" />
-<BootstrapSwitchButton checked={true} onstyle="danger" />
-<BootstrapSwitchButton checked={true} onstyle="warning" />
-<BootstrapSwitchButton checked={true} onstyle="info" />
-<BootstrapSwitchButton checked={true} onstyle="light" />
-<BootstrapSwitchButton checked={true} onstyle="dark" />`}
+              {`<BootstrapSwitchButton checked={true} styleOn="primary" styleOff="info" />
+<BootstrapSwitchButton checked={true} styleOn="secondary" />
+<BootstrapSwitchButton checked={true} styleOn="success" />
+<BootstrapSwitchButton checked={true} styleOn="danger" />
+<BootstrapSwitchButton checked={true} styleOn="warning" />
+<BootstrapSwitchButton checked={true} styleOn="info" />
+<BootstrapSwitchButton checked={true} styleOn="light" />
+<BootstrapSwitchButton checked={true} styleOn="dark" />`}
             </code>
           </pre>
         </div>
@@ -108,44 +108,44 @@ const AppMain: React.SFC<{ compiler: string; framework: string }> = props => {
         <div className="col p-3 bg-white border">
           <BootstrapSwitchButton
             checked={true}
-            onstyle="outline-primary"
-            offstyle="outline-secondary"
+            styleOn="outline-primary"
+            styleOff="outline-secondary"
           />
           <BootstrapSwitchButton
             checked={true}
-            onstyle="outline-secondary"
-            offstyle="outline-success"
+            styleOn="outline-secondary"
+            styleOff="outline-success"
           />
           <BootstrapSwitchButton
             checked={true}
-            onstyle="outline-success"
-            offstyle="outline-danger"
+            styleOn="outline-success"
+            styleOff="outline-danger"
           />
           <BootstrapSwitchButton
             checked={true}
-            onstyle="outline-danger"
-            offstyle="outline-warning"
+            styleOn="outline-danger"
+            styleOff="outline-warning"
           />
           <BootstrapSwitchButton
             checked={true}
-            onstyle="outline-warning"
-            offstyle="outline-info"
+            styleOn="outline-warning"
+            styleOff="outline-info"
           />
           <BootstrapSwitchButton
             checked={true}
-            onstyle="outline-info"
-            offstyle="outline-primary"
+            styleOn="outline-info"
+            styleOff="outline-primary"
           />
           <BootstrapSwitchButton
             checked={true}
-            onstyle="outline-light"
-            offstyle="outline-dark"
+            styleOn="outline-light"
+            styleOff="outline-dark"
             className="border"
           />
           <BootstrapSwitchButton
             checked={true}
-            onstyle="outline-dark"
-            offstyle="outline-light"
+            styleOn="outline-dark"
+            styleOff="outline-light"
             className="border"
           />
         </div>
@@ -154,14 +154,14 @@ const AppMain: React.SFC<{ compiler: string; framework: string }> = props => {
         <div className="col p-0">
           <pre>
             <code className="language-typescript">
-              {`<BootstrapSwitchButton checked={true} onstyle="outline-primary" offstyle="outline-secondary"/>
-<BootstrapSwitchButton checked={true} onstyle="outline-secondary" offstyle="outline-success"/>
-<BootstrapSwitchButton checked={true} onstyle="outline-success" offstyle="outline-danger"/>
-<BootstrapSwitchButton checked={true} onstyle="outline-danger" offstyle="outline-warning"/>
-<BootstrapSwitchButton checked={true} onstyle="outline-warning" offstyle="outline-info"/>
-<BootstrapSwitchButton checked={true} onstyle="outline-info" offstyle="outline-primary"/>
-<BootstrapSwitchButton checked={true} onstyle="outline-light" offstyle="outline-dark" className="border" />
-<BootstrapSwitchButton checked={true} onstyle="outline-dark" offstyle="outline-light" className="border"/>`}
+              {`<BootstrapSwitchButton checked={true} styleOn="outline-primary" styleOff="outline-secondary"/>
+<BootstrapSwitchButton checked={true} styleOn="outline-secondary" styleOff="outline-success"/>
+<BootstrapSwitchButton checked={true} styleOn="outline-success" styleOff="outline-danger"/>
+<BootstrapSwitchButton checked={true} styleOn="outline-danger" styleOff="outline-warning"/>
+<BootstrapSwitchButton checked={true} styleOn="outline-warning" styleOff="outline-info"/>
+<BootstrapSwitchButton checked={true} styleOn="outline-info" styleOff="outline-primary"/>
+<BootstrapSwitchButton checked={true} styleOn="outline-light" styleOff="outline-dark" className="border" />
+<BootstrapSwitchButton checked={true} styleOn="outline-dark" styleOff="outline-light" className="border"/>`}
             </code>
           </pre>
         </div>
@@ -175,22 +175,22 @@ const AppMain: React.SFC<{ compiler: string; framework: string }> = props => {
       <p>Standard colors look great on dark backgrounds.</p>
       <div className="row">
         <div className="col p-3 bg-dark border">
-          <BootstrapSwitchButton checked={true} onstyle="primary" />
-          <BootstrapSwitchButton checked={true} onstyle="secondary" />
-          <BootstrapSwitchButton checked={true} onstyle="success" />
-          <BootstrapSwitchButton checked={true} onstyle="danger" />
-          <BootstrapSwitchButton checked={true} onstyle="warning" />
-          <BootstrapSwitchButton checked={true} onstyle="info" />
+          <BootstrapSwitchButton checked={true} styleOn="primary" />
+          <BootstrapSwitchButton checked={true} styleOn="secondary" />
+          <BootstrapSwitchButton checked={true} styleOn="success" />
+          <BootstrapSwitchButton checked={true} styleOn="danger" />
+          <BootstrapSwitchButton checked={true} styleOn="warning" />
+          <BootstrapSwitchButton checked={true} styleOn="info" />
           <BootstrapSwitchButton
             checked={true}
-            onstyle="light"
-            offstyle="dark"
+            styleOn="light"
+            styleOff="dark"
             className="border"
           />
           <BootstrapSwitchButton
             checked={true}
-            onstyle="dark"
-            offstyle="light"
+            styleOn="dark"
+            styleOff="light"
             className="border"
           />
         </div>
@@ -199,14 +199,14 @@ const AppMain: React.SFC<{ compiler: string; framework: string }> = props => {
         <div className="col p-0">
           <pre>
             <code className="language-typescript">
-              {`<BootstrapSwitchButton checked={true} onstyle="primary" />
-<BootstrapSwitchButton checked={true} onstyle="secondary" />
-<BootstrapSwitchButton checked={true} onstyle="success" />
-<BootstrapSwitchButton checked={true} onstyle="danger" />
-<BootstrapSwitchButton checked={true} onstyle="warning" />
-<BootstrapSwitchButton checked={true} onstyle="info" />
-<BootstrapSwitchButton checked={true} onstyle="light" offstyle="dark" className="border" />
-<BootstrapSwitchButton checked={true} onstyle="dark" offstyle="light" className="border"/>`}
+              {`<BootstrapSwitchButton checked={true} styleOn="primary" />
+<BootstrapSwitchButton checked={true} styleOn="secondary" />
+<BootstrapSwitchButton checked={true} styleOn="success" />
+<BootstrapSwitchButton checked={true} styleOn="danger" />
+<BootstrapSwitchButton checked={true} styleOn="warning" />
+<BootstrapSwitchButton checked={true} styleOn="info" />
+<BootstrapSwitchButton checked={true} styleOn="light" styleOff="dark" className="border" />
+<BootstrapSwitchButton checked={true} styleOn="dark" styleOff="light" className="border"/>`}
             </code>
           </pre>
         </div>
@@ -222,44 +222,44 @@ const AppMain: React.SFC<{ compiler: string; framework: string }> = props => {
         <div className="col p-3 bg-dark border">
           <BootstrapSwitchButton
             checked={true}
-            onstyle="outline-primary"
-            offstyle="outline-secondary"
+            styleOn="outline-primary"
+            styleOff="outline-secondary"
           />
           <BootstrapSwitchButton
             checked={true}
-            onstyle="outline-secondary"
-            offstyle="outline-success"
+            styleOn="outline-secondary"
+            styleOff="outline-success"
           />
           <BootstrapSwitchButton
             checked={true}
-            onstyle="outline-success"
-            offstyle="outline-danger"
+            styleOn="outline-success"
+            styleOff="outline-danger"
           />
           <BootstrapSwitchButton
             checked={true}
-            onstyle="outline-danger"
-            offstyle="outline-warning"
+            styleOn="outline-danger"
+            styleOff="outline-warning"
           />
           <BootstrapSwitchButton
             checked={true}
-            onstyle="outline-warning"
-            offstyle="outline-info"
+            styleOn="outline-warning"
+            styleOff="outline-info"
           />
           <BootstrapSwitchButton
             checked={true}
-            onstyle="outline-info"
-            offstyle="outline-primary"
+            styleOn="outline-info"
+            styleOff="outline-primary"
           />
           <BootstrapSwitchButton
             checked={true}
-            onstyle="outline-light"
-            offstyle="outline-dark"
+            styleOn="outline-light"
+            styleOff="outline-dark"
             className="border"
           />
           <BootstrapSwitchButton
             checked={true}
-            onstyle="outline-dark"
-            offstyle="outline-light"
+            styleOn="outline-dark"
+            styleOff="outline-light"
             className="border"
           />
         </div>
@@ -268,14 +268,14 @@ const AppMain: React.SFC<{ compiler: string; framework: string }> = props => {
         <div className="col p-0">
           <pre>
             <code className="language-typescript">
-              {`<BootstrapSwitchButton checked={true} onstyle="outline-primary" offstyle="outline-secondary"/>
-<BootstrapSwitchButton checked={true} onstyle="outline-secondary" offstyle="outline-success"/>
-<BootstrapSwitchButton checked={true} onstyle="outline-success" offstyle="outline-danger"/>
-<BootstrapSwitchButton checked={true} onstyle="outline-danger" offstyle="outline-warning"/>
-<BootstrapSwitchButton checked={true} onstyle="outline-warning" offstyle="outline-info"/>
-<BootstrapSwitchButton checked={true} onstyle="outline-info" offstyle="outline-primary"/>
-<BootstrapSwitchButton checked={true} onstyle="outline-light" offstyle="outline-dark" className="border" />
-<BootstrapSwitchButton checked={true} onstyle="outline-dark" offstyle="outline-light" className="border"/>`}
+              {`<BootstrapSwitchButton checked={true} styleOn="outline-primary" styleOff="outline-secondary"/>
+<BootstrapSwitchButton checked={true} styleOn="outline-secondary" styleOff="outline-success"/>
+<BootstrapSwitchButton checked={true} styleOn="outline-success" styleOff="outline-danger"/>
+<BootstrapSwitchButton checked={true} styleOn="outline-danger" styleOff="outline-warning"/>
+<BootstrapSwitchButton checked={true} styleOn="outline-warning" styleOff="outline-info"/>
+<BootstrapSwitchButton checked={true} styleOn="outline-info" styleOff="outline-primary"/>
+<BootstrapSwitchButton checked={true} styleOn="outline-light" styleOff="outline-dark" className="border" />
+<BootstrapSwitchButton checked={true} styleOn="outline-dark" styleOff="outline-light" className="border"/>`}
             </code>
           </pre>
         </div>

@@ -19,7 +19,7 @@ Project                                                                         
 **Demos and API Docs:** https://gitbrent.github.io/bootstrap-switch-button-react/  
 
 ```typescript
-<BootstrapSwitchButton onlabel='Admin User' offlabel='Regular User' checked={false}/>
+<BootstrapSwitchButton labelOn='Admin User' labelOff='Regular User' checked={false}/>
 ```
 
 ![Demo GIF](https://github.com/gitbrent/bootstrap-switch-button-react/blob/master/img/demo.gif?raw=true)
@@ -43,10 +43,10 @@ import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
 <BootstrapSwitchButton
     checked={false}
-    onlabel='Admin User'
-    onstyle='danger'
-    offlabel='Regular User'
-    offstyle='success'
+    labelOn='Admin User'
+    styleOn='danger'
+    labelOff='Regular User'
+    styleOff='success'
     style='w-100 mx-3'
     onChange={(checked: boolean) => {
         this.setState({ isUserAdmin: checked })
@@ -58,11 +58,11 @@ import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 # Properties
 Name       |Type        |Default   |Description                 |
 -----------|------------|----------|----------------------------|
-`onlabel`  |string/html |"On"      |Text of the on switch-button
-`offlabel` |string/html |"Off"     |Text of the off switch-button
+`labelOn`  |string/html |"On"      |Text of the on switch-button
+`labelOff` |string/html |"Off"     |Text of the off switch-button
 `size`     |string      |          |Size of the switch-button. Possible values are: `xs`, `sm`, `lg` (no size specified means default bootstrap size).
-`onstyle`  |string      |"primary" |Style of the on switch-button. Possible values are: `primary`,`secondary`,`success`,`danger`,`warning`,`info`,`light`,`dark`
-`offstyle` |string      |"light"   |Style of the off switch-button. Possible values are: `primary`,`secondary`,`success`,`danger`,`warning`,`info`,`light`,`dark`
+`styleOn`  |string      |"primary" |Style of the on switch-button. Possible values are: `primary`,`secondary`,`success`,`danger`,`warning`,`info`,`light`,`dark`
+`styleOff` |string      |"light"   |Style of the off switch-button. Possible values are: `primary`,`secondary`,`success`,`danger`,`warning`,`info`,`light`,`dark`
 `style`    |string      |          |Appends the value to the class attribute of the switch-button. This can be used to apply custom styles. Refer to Custom Styles for reference.
 `width`    |integer     |     |Sets the width of the switch-button. if set to *null*, width will be auto-calculated.
 `height`   |integer     |     |Sets the height of the switch-button. if set to *null*, height will be auto-calculated.

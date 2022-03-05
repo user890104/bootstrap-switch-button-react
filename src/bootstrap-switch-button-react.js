@@ -35,10 +35,10 @@ const BootstrapSwitchButton = ({
 	checked: defaultChecked,
 	onChange,
 	disabled,
-	onlabel,
-	offlabel,
-	onstyle,
-	offstyle,
+	labelOn,
+	labelOff,
+	styleOn,
+	styleOff,
 	size,
 	className,
 	width,
@@ -78,7 +78,7 @@ const BootstrapSwitchButton = ({
 		<div
 			className={classNames(
 				'switch btn',
-				(checked ? 'on btn-' + onstyle : 'off btn-' + offstyle),
+				(checked ? 'on btn-' + styleOn : 'off btn-' + styleOff),
 				(size ? 'btn-' + size : ''),
 				className || ''
 			)}
@@ -89,22 +89,22 @@ const BootstrapSwitchButton = ({
 				<span
 					className={classNames(
 						'switch-on btn',
-						'btn-' + onstyle,
+						'btn-' + styleOn,
 						(size ? 'btn-' + size : '')
 					)}
 					style={labelStyle}
 				>
-					{onlabel}
+					{labelOn}
 				</span>
 				<span
 					className={classNames(
 						'switch-off btn',
-						'btn-' + offstyle,
+						'btn-' + styleOff,
 						(size ? 'btn-' + size : '')
 					)}
 					style={labelStyle}
 				>
-					{offlabel}
+					{labelOff}
 				</span>
 				<span
 					className={classNames(
@@ -121,10 +121,10 @@ BootstrapSwitchButton.defaultProps = {
 	checked: false,
 	onChange: () => {},
 	disabled: false,
-	onlabel: 'On',
-	offlabel: 'Off',
-	onstyle: 'primary',
-	offstyle: 'light',
+	labelOn: 'On',
+	labelOff: 'Off',
+	styleOn: 'primary',
+	styleOff: 'light',
 	className: '',
 };
 

@@ -27,10 +27,10 @@ interface BootstrapSwitchButtonProps {
   onChange?: (checked: boolean) => void;
   checked?: boolean;
   disabled?: boolean;
-  onlabel?: string;
-  offlabel?: string;
-  onstyle?: Colors | ColorsOutline;
-  offstyle?: Colors | ColorsOutline;
+  labelOn?: string;
+  labelOff?: string;
+  styleOn?: Colors | ColorsOutline;
+  styleOff?: Colors | ColorsOutline;
   size?: "xs" | "sm" | "lg";
   className?: string;
   width?: number;
