@@ -33,7 +33,7 @@ import classNames from "classnames";
 
 const BootstrapSwitchButton = (props) => {
 	const [checked, setChecked] = useState(typeof props.checked === 'boolean' ? props.checked : false);
-	const [disabled, setDisabled] = useState(typeof props.disabled === 'boolean' ? props.disabled : false);
+	const disabled = typeof props.disabled === 'boolean' ? props.disabled : false;
 	const onlabel = props.onlabel || 'On';
 	const offlabel = props.offlabel || 'Off';
 	const onstyle = props.onstyle || 'primary';
@@ -48,12 +48,6 @@ const BootstrapSwitchButton = (props) => {
 			setChecked(props.checked);
 		}
 	}, [props.checked]);
-
-	useEffect(() => {
-		if (props.disabled !== disabled) {
-			setDisabled(props.disabled);
-		}
-	}, [props.disabled]);
 
 	const toggle = event => {
 		checked ? off() : on();
