@@ -31,49 +31,48 @@ import React, {useEffect, useState} from 'react';
 import './style.css';
 import classNames from "classnames";
 
-const BootstrapSwitchButton = (props) => {
-	const [checked, setChecked] = useState(typeof props.checked === 'boolean' ? props.checked : false);
-	const disabled = typeof props.disabled === 'boolean' ? props.disabled : false;
-	const onlabel = props.onlabel || 'On';
-	const offlabel = props.offlabel || 'Off';
-	const onstyle = props.onstyle || 'primary';
-	const offstyle = props.offstyle || 'light';
-	const size = props.size || '';
-	const className = props.className || '';
-	const width = props.width || null;
-	const height = props.height || null;
+const BootstrapSwitchButton = ({
+	checked: defaultChecked,
+	onChange,
+	disabled,
+	onlabel,
+	offlabel,
+	onstyle,
+	offstyle,
+	size,
+	className,
+	width,
+	height,
+}) => {
+	const [checked, setChecked] = useState(defaultChecked);
 
 	useEffect(() => {
-		if (props.checked !== checked) {
-			setChecked(props.checked);
-		}
-	}, [props.checked]);
+		setChecked(defaultChecked);
+	}, [defaultChecked]);
 
 	const toggle = event => {
-		checked ? off() : on();
+		if (!disabled) {
+			const newState = !checked;
+
+			setChecked(newState);
+			onChange(newState);
+		}
+
 		event.stopPropagation();
 	};
 
-	const off = () => {
-		if (!disabled) {
-			setChecked(false);
-			if (props.onChange) props.onChange(false);
-		}
-	};
-
-	const on = () => {
-		if (!disabled) {
-			setChecked(true);
-			if (props.onChange) props.onChange(true);
-		}
-	};
-
 	let switchStyle = {};
-	if (width) switchStyle.width = width + 'px';
-	if (height) switchStyle.height = height + 'px';
+	if (width) {
+		switchStyle.width = width + 'px';
+	}
+	if (height) {
+		switchStyle.height = height + 'px';
+	}
 
 	let labelStyle = {};
-	if (height) labelStyle.lineHeight = 'calc(' + height + 'px * 0.8)';
+	if (height) {
+		labelStyle.lineHeight = 'calc(' + height + 'px * 0.8)';
+	}
 
 	return (
 		<div
@@ -116,6 +115,17 @@ const BootstrapSwitchButton = (props) => {
 			</div>
 		</div>
 	);
-}
+};
+
+BootstrapSwitchButton.defaultProps = {
+	checked: false,
+	onChange: () => {},
+	disabled: false,
+	onlabel: 'On',
+	offlabel: 'Off',
+	onstyle: 'primary',
+	offstyle: 'light',
+	className: '',
+};
 
 export default BootstrapSwitchButton;
