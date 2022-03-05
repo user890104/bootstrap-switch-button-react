@@ -125,7 +125,6 @@ BootstrapSwitchButton.defaultProps = {
 	labelOff: 'Off',
 	styleOn: 'primary',
 	styleOff: 'light',
-	className: '',
 };
 
 export default BootstrapSwitchButton;
